@@ -1,0 +1,38 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-322,-240",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_CLK100MHZ -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_CPU_RESETN -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_clk_100mhz -pg 1 -lvl 3 -x 630 -y 200 -defaultsOSRD
+preplace portBus peripheral_aresetn -pg 1 -lvl 3 -x 630 -y 60 -defaultsOSRD
+preplace inst system_clock -pg 1 -lvl 1 -x 130 -y 60 -defaultsOSRD -pinDir clk_in1 left -pinY clk_in1 0L -pinDir clk_100mhz right -pinY clk_100mhz 0R
+preplace inst system_reset -pg 1 -lvl 2 -x 430 -y 60 -swap {0 3 1 2 4 6 7 8 9 5} -defaultsOSRD -pinDir slowest_sync_clk left -pinY slowest_sync_clk 0L -pinDir ext_reset_in left -pinY ext_reset_in 60L -pinDir aux_reset_in left -pinY aux_reset_in 20L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 40L -pinDir dcm_locked left -pinY dcm_locked 80L -pinDir mb_reset right -pinY mb_reset 20R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 40R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 60R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 80R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 0R
+preplace netloc system_clock_clk_100mhz 1 1 2 240 200 NJ
+preplace netloc clk_in1_0_1 1 0 1 NJ 60
+preplace netloc ext_reset_in_0_1 1 0 2 NJ 120 NJ
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 1 NJ 60
+levelinfo -pg 1 0 130 430 630
+pagesize -pg 1 -db -bbox -sgen -150 0 850 220
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-322,-240",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_CLK100MHZ -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port port-id_CPU_RESETN -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace inst system_clock -pg 1 -lvl 1 -x 120 -y 50 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 390 -y 90 -defaultsOSRD
+preplace netloc system_clock_clk_100mhz 1 1 1 NJ 50
+preplace netloc clk_in1_0_1 1 0 1 NJ 50
+preplace netloc ext_reset_in_0_1 1 0 2 NJ 110 220J
+levelinfo -pg 1 0 120 390 570
+pagesize -pg 1 -db -bbox -sgen -120 0 570 180
+"
+}
+

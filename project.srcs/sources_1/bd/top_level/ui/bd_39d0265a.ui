@@ -1,0 +1,54 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-481,-475",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeReset":"true",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layers":"/source_50mhz/proc_sys_reset_0_peripheral_aresetn:true|/ext_reset_in_0_1:true|/clk_in1_0_1:true|/source_50mhz/system_clock_clk_100mhz:true|",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_CLK100MHZ -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_CPU_RESETN -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_BTNU -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace inst source_50mhz -pg 1 -lvl 1 -x 180 -y 140 -swap {0 1 3 2} -defaultsOSRD -pinDir CLK100MHZ left -pinY CLK100MHZ 0L -pinDir CPU_RESETN left -pinY CPU_RESETN 20L -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 20R -pinDir clk_50mhz right -pinY clk_50mhz 0R
+preplace inst packet_gen -pg 1 -lvl 3 -x 640 -y 80 -swap {0 1 2 3 4 5 7 8 6} -defaultsOSRD -pinDir axis_out right -pinY axis_out 0R -pinDir clk left -pinY clk 20L -pinDir resetn left -pinY resetn 40L -pinDir start left -pinY start 0L
+preplace inst button -pg 1 -lvl 2 -x 420 -y 60 -swap {1 0 2} -defaultsOSRD -pinDir CLK left -pinY CLK 20L -pinDir PIN left -pinY PIN 0L -pinDir Q right -pinY Q 20R
+preplace inst data_consumer -pg 1 -lvl 7 -x 1710 -y 280 -defaultsOSRD -pinDir AXIS_RX left -pinY AXIS_RX 0L -pinDir clk left -pinY clk 20L
+preplace inst system_ila -pg 1 -lvl 6 -x 1460 -y 360 -defaultsOSRD -pinDir SLOT_0_AXIS right -pinY SLOT_0_AXIS 0R -pinDir clk left -pinY clk 0L -pinDir resetn left -pinY resetn 20L
+preplace inst add_header_pre -pg 1 -lvl 4 -x 910 -y 60 -defaultsOSRD -pinDir axis_in left -pinY axis_in 20L -pinDir axis_out right -pinY axis_out 0R -pinDir axis_plen right -pinY axis_plen 140R -pinDir clk left -pinY clk 120L -pinDir resetn left -pinY resetn 140L
+preplace inst data_fifo -pg 1 -lvl 5 -x 1180 -y 60 -swap {0 1 2 3 4 5 6 7 8 9 10 11 13 12} -defaultsOSRD -pinDir S_AXIS left -pinY S_AXIS 0L -pinDir M_AXIS right -pinY M_AXIS 40R -pinDir s_axis_aresetn left -pinY s_axis_aresetn 40L -pinDir s_axis_aclk left -pinY s_axis_aclk 20L
+preplace inst plen_fifo -pg 1 -lvl 5 -x 1180 -y 200 -swap {0 1 2 3 4 5 6 7 9 8} -defaultsOSRD -pinDir S_AXIS left -pinY S_AXIS 0L -pinDir M_AXIS right -pinY M_AXIS 0R -pinDir s_axis_aresetn left -pinY s_axis_aresetn 40L -pinDir s_axis_aclk left -pinY s_axis_aclk 20L
+preplace inst add_header_post -pg 1 -lvl 6 -x 1460 -y 100 -defaultsOSRD -pinDir axis_data left -pinY axis_data 0L -pinDir axis_out right -pinY axis_out 140R -pinDir axis_plen left -pinY axis_plen 100L -pinDir clk left -pinY clk 120L -pinDir resetn left -pinY resetn 140L
+preplace netloc PIN_0_1 1 0 2 NJ 60 NJ
+preplace netloc button_Q 1 2 1 N 80
+preplace netloc clk_in1_0_1 1 0 1 N 140
+preplace netloc ext_reset_in_0_1 1 0 1 N 160
+preplace netloc source_50mhz_clk_50mhz 1 1 6 340 140 500 180 780 260 1040 300 1300 300 N
+preplace netloc source_50mhz_peripheral_aresetn 1 1 5 NJ 160 520 200 760 280 1060 320 1320
+preplace netloc add_header_post_axis_out 1 6 1 1600 240n
+preplace netloc add_header_pre_axis_out 1 4 1 N 60
+preplace netloc add_header_pre_axis_plen 1 4 1 N 200
+preplace netloc data_fifo_M_AXIS 1 5 1 N 100
+preplace netloc packet_gen_axis_out1 1 3 1 N 80
+preplace netloc plen_fifo_M_AXIS 1 5 1 N 200
+levelinfo -pg 1 0 180 420 640 910 1180 1460 1710 1820
+pagesize -pg 1 -db -bbox -sgen -150 0 1820 440
+",
+   "No Loops_ScaleFactor":"0.662589",
+   "No Loops_TopLeft":"-142,-297",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_CLK100MHZ -pg 1 -lvl 0 -x -90 -y -230 -defaultsOSRD
+preplace inst system_clock -pg 1 -lvl 1 -x 420 -y -230 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 420 -y -50 -defaultsOSRD
+preplace netloc clk_in1_0_1 1 0 1 N -230
+levelinfo -pg 1 -90 420 610
+pagesize -pg 1 -db -bbox -sgen -230 -540 610 140
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}
