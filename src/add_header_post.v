@@ -98,6 +98,7 @@ always @* begin
     
     else case(fsm_state)
 
+    // In this state, axis_out is fed from axis_plen
     FSM_WAIT_FOR_PLEN:
         begin
             axis_out_tdata   = axis_plen_tdata;
@@ -108,6 +109,7 @@ always @* begin
             axis_plen_tready = axis_out_tready;
         end
 
+    // In this state, axis_out is fed from axis_data
     FSM_WRITE_PACKET:
         begin
             axis_out_tdata   = axis_data_tdata;
